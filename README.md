@@ -56,5 +56,4 @@ The script `fit_from_raw.py` provides a starting point. For publication-quality 
 This repo **does not include the course lab manual PDF** by default, because it may be copyrighted course material.  
 If you have permission to share it, add it under `docs/` and update `.gitignore` as desired.
 
----
-中文说明：这个仓库已经把 Day1–Day4 的原始 CSV、最终报告、以及复现表格计算的脚本整理好了，直接上传到 GitHub 即可。
+
