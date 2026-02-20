@@ -1,0 +1,258 @@
+\documentclass[aps,prl,onecolumn,superscriptaddress]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\DeclareSIUnit{\angstrom}{\text{\AA}}
+
+\sisetup{
+  separate-uncertainty = true,
+  multi-part-units = single,
+  per-mode = symbol
+}
+
+\graphicspath{{../figures/}}
+
+\begin{document}
+
+\title{Hydrogen--Deuterium Isotope Shift in the Balmer Series\\
+(High-Resolution Spectroscopy with a Scanning Monochromator)}
+
+\author{Hongyu Wang}
+\author{Cici Zhang}
+\affiliation{Department of Physics, University of California, Santa Barbara}
+\date{\today}
+
+\begin{abstract}
+We measured the isotope shift between hydrogen (H) and deuterium (D) emission lines in a mixed H--D discharge lamp. 
+Using a scanning monochromator with a photomultiplier tube, we resolved the H/D doublet structure near the Balmer H$\alpha$ (\SI{6563}{\angstrom}) and H$\beta$ (\SI{4861}{\angstrom}) transitions. 
+Peak separations were extracted by fitting a two-Gaussian model to each scan and converting time separations into wavelength separations using a mercury-lamp calibration.
+For the new lamp data set (Day 4), we obtain $\Delta\lambda_\alpha = \SI{1.801 \pm 0.052}{\angstrom}$ and $\Delta\lambda_\beta = \SI{1.263 \pm 0.039}{\angstrom}$, where the uncertainties include calibration systematics that dominate the error budget. 
+The H$\alpha$ result agrees with the reduced-mass prediction at the \SI{\sim 1}{\percent} level, while the H$\beta$ result is lower by about \SI{4}{\percent}, consistent with increased peak overlap and baseline systematics at shorter wavelength.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+Isotopes of the same element share the same nuclear charge but differ in nuclear mass. 
+In hydrogenic atoms the electron is not orbiting an infinitely heavy nucleus; instead, the electron--nucleus system must be described with the reduced mass. 
+Consequently, the Rydberg constant depends weakly on nuclear mass, shifting atomic transition wavelengths between isotopes. 
+The hydrogen--deuterium pair is the cleanest textbook example because both isotopes are hydrogenic (one electron), and the nuclear masses are accurately known.
+
+This report documents (i) the reduced-mass prediction for the H/D isotope shift, (ii) the calibration and fitting procedure used to extract $\Delta\lambda$ from time-domain scans, and (iii) the final Day~4 results obtained with a new lamp. 
+We also include a brief comparison to an earlier ``old lamp'' data set (Day~3) which exhibited nearly equal H and D peak heights for H$\alpha$ and reduced data quality.
+
+\section{Theory}
+\subsection{Reduced mass and the isotope-dependent Rydberg constant}
+For a hydrogenic atom with nuclear mass $M$, the reduced mass is
+\begin{equation}
+\mu = \frac{m_e M}{m_e + M},
+\end{equation}
+and the Rydberg constant becomes
+\begin{equation}
+R(M) = R_\infty \frac{\mu}{m_e} 
+      = \frac{R_\infty}{1+m_e/M},
+\end{equation}
+where $R_\infty$ is the Rydberg constant for an infinite-mass nucleus.
+
+\subsection{Balmer wavelengths and isotope shift}
+The Balmer transitions correspond to $n\to 2$ with $n=3,4,5,\ldots$:
+\begin{equation}
+\frac{1}{\lambda(M)} = R(M)\left(\frac{1}{2^2}-\frac{1}{n^2}\right).
+\end{equation}
+Deuterium has a larger nuclear mass than hydrogen ($M_D > M_H$), therefore $R_D>R_H$ and the deuterium wavelength is slightly shorter. 
+We define the isotope shift as
+\begin{equation}
+\Delta\lambda \equiv \lambda_H-\lambda_D > 0.
+\end{equation}
+
+\begin{table}[t]
+\caption{Reduced-mass prediction for H/D isotope shifts in the Balmer series (vacuum wavelengths).}
+\label{tab:theory}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+Line & Transition & $\lambda_H$ (\si{\angstrom}) & $\Delta\lambda_\text{th}$ (\si{\angstrom}) \\
+\midrule
+H$\alpha$ & $3\to 2$ & 6564.696 & 1.7858 \\
+H$\beta$  & $4\to 2$ & 4862.744 & 1.3228 \\
+H$\gamma$ & $5\to 2$ & 4341.744 & 1.1811 \\
+H$\delta$ & $6\to 2$ & 4102.478 & 1.1161 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\section{Experimental method}
+\subsection{Optical setup and scanning strategy}
+The light source was a mixed hydrogen--deuterium discharge lamp. 
+Light entered a scanning monochromator (diffraction grating spectrometer) with adjustable entrance/exit slits and was detected by a photomultiplier tube (PMT). 
+The monochromator was driven at a nominal sweep rate of \SI{5}{\angstrom\per\minute}, producing a detector voltage as a function of time.
+Each Balmer region was scanned multiple times (four trials for Day~4), and the H and D components appeared as two nearby peaks.
+
+\subsection{Mercury calibration}
+To convert time separations into wavelength separations, we used a mercury (Hg) lamp calibration near the red end of the spectrum. 
+A convenient feature is the strong Hg doublet at 3131.548~\si{\angstrom} and 3131.846~\si{\angstrom}. 
+When observed in second order, these appear near 6263~\si{\angstrom} on the monochromator's first-order wavelength scale, with a known separation of
+\begin{equation}
+\Delta\lambda_{\mathrm{Hg}} = 2\times(3131.846-3131.548)\,\si{\angstrom} \approx \SI{0.596}{\angstrom}.
+\end{equation}
+Fitting the Hg scan yields a time separation $\Delta t_{\mathrm{Hg}}$, and therefore a scan-rate calibration constant
+\begin{equation}
+\beta \equiv \frac{d\lambda}{dt} \approx \frac{\Delta\lambda_{\mathrm{Hg}}}{\Delta t_{\mathrm{Hg}}}.
+\end{equation}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_fourpanels.pdf}
+\caption{Representative scans and two-Gaussian fits. Top-left: Hg calibration doublet used to determine the scan rate $\beta$. 
+Top-right: old-lamp H$\alpha$ scan (Day~3) showing nearly equal peak heights. 
+Bottom-left: new-lamp H$\alpha$ scan (Day~4). 
+Bottom-right: new-lamp H$\beta$ scan (Day~4) with stronger overlap at shorter wavelength.}
+\label{fig:fourpanels}
+\end{figure}
+
+\section{Data analysis}
+The key steps are: (i) extract the time separation $\Delta t$ between the H and D components using a two-Gaussian fit; 
+(ii) convert $\Delta t$ to a wavelength separation $\Delta\lambda$ using a mercury (Hg) scan-rate calibration; and 
+(iii) build an uncertainty budget that separates repeatability (statistics) from scan-rate calibration (systematics).
+
+\subsection*{Step 1: Fit each H/D scan to obtain peak centers in time}
+For each scan window containing a single H/D doublet, the detector signal is modeled as
+\begin{equation}
+V(t) = A_D \exp\!\left[-\frac{(t-\mu_D)^2}{2\sigma_D^2}\right] 
+     + A_H \exp\!\left[-\frac{(t-\mu_H)^2}{2\sigma_H^2}\right] 
+     + (c_0+c_1 t),
+\label{eq:2gauss}
+\end{equation}
+where $\mu_D$ and $\mu_H$ are the fitted peak-center times (and $c_0+c_1 t$ captures slow baseline drift). 
+The fitted time separation is
+\begin{equation}
+\Delta t_i \equiv |\mu_{H,i}-\mu_{D,i}|\qquad (i=1,\ldots,N).
+\end{equation}
+
+\subsection*{Step 2: Calibrate the scan rate $\beta=d\lambda/dt$ using the Hg doublet}
+The Hg reference is the 3131.548~\si{\angstrom} and 3131.846~\si{\angstrom} doublet. 
+Observed in \emph{second order}, its effective separation on the monochromator scale is
+\begin{equation}
+\Delta\lambda_{\mathrm{Hg}} = 2(3131.846-3131.548)\,\si{\angstrom} \approx \SI{0.596}{\angstrom}.
+\end{equation}
+Fitting the Hg scan with Eq.~(\ref{eq:2gauss}) gives a time separation $\Delta t_{\mathrm{Hg}}$, so the scan-rate calibration constant is
+\begin{equation}
+\beta \equiv \frac{d\lambda}{dt} \approx \frac{\Delta\lambda_{\mathrm{Hg}}}{\Delta t_{\mathrm{Hg}}}.
+\end{equation}
+When multiple Hg scans are available, we use the mean $\bar\beta$ and assign an uncertainty $\sigma_\beta$ that captures both fit uncertainty and run-to-run variation.
+
+\subsection*{Step 3: Convert each trial into an isotope shift in \si{\angstrom}}
+Each trial's wavelength separation is
+\begin{equation}
+\Delta\lambda_i = \beta\,\Delta t_i.
+\end{equation}
+
+\subsection*{Step 4: ``Statistical'' term (repeatability-only SEM)}
+From the $N=4$ Day~4 trials, the repeatability mean and standard error of the mean (SEM) are
+\begin{align}
+\overline{\Delta\lambda} &= \frac{1}{N}\sum_{i=1}^N \Delta\lambda_i,\\
+s &= \sqrt{\frac{1}{N-1}\sum_{i=1}^N (\Delta\lambda_i-\overline{\Delta\lambda})^2},\\
+\sigma_{\mathrm{SEM}} &= \frac{s}{\sqrt{N}}.
+\end{align}
+This is the small ``statistical'' uncertainty reported in Table~\ref{tab:errorbudget}.
+
+\subsection*{Step 5: ``Calibration'' term and the total uncertainty}
+Because $\Delta\lambda=\beta\Delta t$, uncertainty in $\beta$ produces a systematic contribution
+\begin{equation}
+\sigma_{\mathrm{cal}} \approx \Delta t_{\mathrm{mean}}\,\sigma_\beta.
+\end{equation}
+The final quoted uncertainty is obtained by adding the independent statistical and calibration terms in quadrature:
+\begin{equation}
+\sigma_{\mathrm{tot}} = \sqrt{\sigma_{\mathrm{SEM}}^2+\sigma_{\mathrm{cal}}^2}.
+\end{equation}
+
+\subsection*{Step 6: Percent difference}
+The percent difference in Table~\ref{tab:compare} is computed as
+\begin{equation}
+\%\,\mathrm{diff} = 100\% \times \frac{\Delta\lambda_{\mathrm{exp}}-\Delta\lambda_{\mathrm{th}}}{\Delta\lambda_{\mathrm{th}}}.
+\end{equation}
+
+\section{Results and discussion}
+\subsection{Old lamp comparison (Day 3)}
+The Day~3 scans taken with an older H--D lamp showed noticeably reduced contrast between the two isotope peaks. 
+Figure~\ref{fig:fourpanels} shows an H$\alpha$ scan where the two peaks are nearly equal in height. 
+This is plausible if the isotope mixture and discharge conditions changed as the lamp aged, and it complicates peak identification if one relies on peak height alone. 
+In all analysis we labeled peaks by \emph{wavelength ordering} (D at shorter wavelength), not by amplitude.
+
+\subsection{New lamp final results (Day 4)}
+With a new lamp (Day~4), the H$\alpha$ and H$\beta$ doublets were reproducible across four trials. 
+The extracted trial shifts (in \si{\angstrom}) were:
+\begin{align*}
+\text{H}\alpha:~&1.7973,\;1.8170,\;1.8071,\;1.8062,\\
+\text{H}\beta:~&1.2656,\;1.2945,\;1.2667,\;1.2552.
+\end{align*}
+The repeatability-only means (SEM uncertainties) were
+\begin{equation}
+\Delta\lambda_\alpha = \SI{1.8069 \pm 0.0044}{\angstrom},\qquad
+\Delta\lambda_\beta  = \SI{1.2705 \pm 0.0085}{\angstrom}.
+\end{equation}
+After including calibration systematics, our final reported values are
+\begin{equation}
+\Delta\lambda_\alpha = \SI{1.801 \pm 0.052}{\angstrom},\qquad
+\Delta\lambda_\beta  = \SI{1.263 \pm 0.039}{\angstrom}.
+\end{equation}
+
+\subsection{Comparison with theory}
+Table~\ref{tab:compare} compares our final Day~4 results with the reduced-mass predictions.
+H$\alpha$ agrees within \SI{\sim 1}{\percent}. 
+H$\beta$ is lower by \SI{\sim 4}{\percent}; this is reasonable given that (i) the doublet spacing is smaller at shorter wavelength and (ii) the peaks overlap more strongly, making the extracted centers more sensitive to baseline modeling and fitting bounds.
+
+\begin{table}[t]
+\caption{Final Day 4 results compared with reduced-mass theory.}
+\label{tab:compare}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+Line & $\Delta\lambda_\text{exp}$ (\si{\angstrom}) & $\Delta\lambda_\text{th}$ (\si{\angstrom}) & Percent difference \\
+\midrule
+H$\alpha$ & 1.801 $\pm$ 0.052 & 1.7858 & +0.9\% \\
+H$\beta$  & 1.263 $\pm$ 0.039 & 1.3228 & $-4.5$\% \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\section{Error budget (Day 4)}
+Table~\ref{tab:errorbudget} summarizes how the final uncertainties were constructed. 
+The calibration term is computed as $\sigma_{\mathrm{cal}}=\Delta t_{\mathrm{mean}}\sigma_\beta$, and it dominates both lines.
+
+\begin{table}[t]
+\caption{Day 4 uncertainty budget for the final results. The ``statistical'' term is the SEM from the four trials; the ``calibration'' term comes from uncertainty in the scan-rate $\beta$.}
+\label{tab:errorbudget}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+Line & Statistical (SEM) (\si{\angstrom}) & Calibration (\si{\angstrom}) & Total (\si{\angstrom}) \\
+\midrule
+H$\alpha$ & 0.0044 & 0.051 & 0.052 \\
+H$\beta$  & 0.0085 & 0.038 & 0.039 \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\section{Conclusion}
+We resolved the hydrogen--deuterium isotope shift in the Balmer spectrum by scanning a monochromator across each line and fitting the resulting doublet. 
+For the Day~4 (new lamp) data, the final results are $\Delta\lambda_\alpha = \SI{1.801\pm0.052}{\angstrom}$ and $\Delta\lambda_\beta = \SI{1.263\pm0.039}{\angstrom}$. 
+The dominant uncertainty is the scan-rate calibration from the Hg reference doublet, and the larger deviation in H$\beta$ is consistent with increased peak overlap and baseline sensitivity at shorter wavelength.
+
+\begin{acknowledgments}
+Advisor: Philip Lubin (Department of Physics, University of California, Santa Barbara).
+\end{acknowledgments}
+
+\begin{thebibliography}{9}
+\bibitem{labmanual}
+University Physics Laboratory Manual, \emph{H--D Isotope Shift in the Balmer Series} (Spring 2025).
+
+\bibitem{nist}
+NIST Atomic Spectra Database (Hg I lines at 3131.548 and 3131.846~\si{\angstrom}).
+
+\bibitem{codata}
+CODATA recommended constants (electron/proton/deuteron masses and $R_\infty$).
+\end{thebibliography}
+
+\end{document}

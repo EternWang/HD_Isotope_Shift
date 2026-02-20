@@ -1,0 +1,43 @@
+{
+  "6559-6561_L-H_trail_1.csv": {
+    "expected_dt_s": 21.6,
+    "left_s": 87.0,
+    "right_s": 125.0,
+    "comment": "Trial 1 contains multiple features; this window isolates the likely doublet."
+  },
+  "6559-6561_L-H_trail_2.csv": {
+    "expected_dt_s": 21.6,
+    "left_s": 5.0,
+    "right_s": 55.0
+  },
+  "6559-6561_L-H_trail_3.csv": {
+    "expected_dt_s": 21.6,
+    "left_s": 5.0,
+    "right_s": 60.0
+  },
+  "6559-6561_L-H_trail_4.csv": {
+    "expected_dt_s": 21.6,
+    "left_s": 20.0,
+    "right_s": 75.0
+  },
+  "4859-4862_H-L_trail_1.csv": {
+    "expected_dt_s": 15.2,
+    "left_s": 25.0,
+    "right_s": 85.0
+  },
+  "4859-4862_L-H_trail_2.csv": {
+    "expected_dt_s": 15.2,
+    "left_s": 20.0,
+    "right_s": 80.0
+  },
+  "4859-4862_L-H_trail_3.csv": {
+    "expected_dt_s": 15.2,
+    "left_s": 15.0,
+    "right_s": 75.0
+  },
+  "4859-4862_L-H_trail_4.csv": {
+    "expected_dt_s": 15.2,
+    "left_s": 15.0,
+    "right_s": 75.0
+  }
+}

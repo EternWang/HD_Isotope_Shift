@@ -1,0 +1,45 @@
+{
+  "day": "Day4",
+  "inputs": {
+    "Halpha": {
+      "trials_A": [
+        1.7973,
+        1.817,
+        1.8071,
+        1.8062
+      ],
+      "theory_A": 1.7858,
+      "calibration_term_A": 0.051
+    },
+    "Hbeta": {
+      "trials_A": [
+        1.2656,
+        1.2945,
+        1.2667,
+        1.2552
+      ],
+      "theory_A": 1.3228,
+      "calibration_term_A": 0.038
+    }
+  },
+  "outputs": {
+    "Halpha": {
+      "trial_mean_A": 1.8069000000000002,
+      "trial_sample_std_A": 0.008056053624449151,
+      "trial_SEM_A": 0.0040280268122245754,
+      "quadrature_total_A": 0.05115882133122302,
+      "final_reported_A": 1.801,
+      "final_reported_total_A": 0.052,
+      "percent_difference_%": 0.851159144361064
+    },
+    "Hbeta": {
+      "trial_mean_A": 1.2705000000000002,
+      "trial_sample_std_A": 0.016818045863496313,
+      "trial_SEM_A": 0.008409022931748156,
+      "quadrature_total_A": 0.0389192968418838,
+      "final_reported_A": 1.263,
+      "final_reported_total_A": 0.039,
+      "percent_difference_%": -4.520713637738137
+    }
+  }
+}

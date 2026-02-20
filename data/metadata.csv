@@ -1,0 +1,23 @@
+relative_path,day,lamp,spectral_region,nominal_sweep_A_per_min,scan_direction,notes
+data/hg/day1/D1_1517_Hg6261_doublet_5A_L-to-H - D1_1517_Hg6261_doublet_5A_L-to-H.csv,Day1,Hg,Hg doublet ~6261 Å,5.0,L->H,Mercury lamp calibration scans.
+data/hg/day1/D1_1547_Hg6261doublet_2A_H-to-L - D1_1547_Hg6261doublet_2A_H-to-L.csv,Day1,Hg,Hg doublet ~6261 Å,2.0,H->L,Mercury lamp calibration scans.
+data/hg/day1/D1_1625_Hg6261_doublet_0.5A_H-to-L - D1_1625_Hg6261_doublet_0.5A_H-to-L.csv,Day1,Hg,Hg doublet ~6261 Å,0.5,H->L,Mercury lamp calibration scans.
+data/hg/day1/D1_1633_Hg6251_single-peak_5A_H-to-L - D1_1633_Hg6251_single-peak_5A_H-to-L.csv,Day1,Hg,Hg single line ~6251 Å,5.0,H->L,Mercury lamp calibration scans.
+data/hg/day1/D1_1651_ Hg6251_single-peak_0.5A_H-to-L - D1_1651_ Hg6251_single-peak_0.5A_H-to-L.csv,Day1,Hg,Hg single line ~6251 Å,0.5,H->L,Mercury lamp calibration scans.
+data/hg/day2/Etern hg lamp 6261 1st (1).csv,Day2,Hg,Hg doublet ~6261 Å,,,Redo calibration; sweep settings not encoded in filename.
+data/hg/day2/hg lamp 6261 2nd.csv,Day2,Hg,Hg doublet ~6261 Å,,,Redo calibration; sweep settings not encoded in filename.
+data/hg/day2/6250 VA 1 (1).csv,Day2,Hg,Hg single line ~6250 Å,,,Redo calibration; sweep settings not encoded in filename.
+data/hg/day2/hg lamp 6250  Aoltage axis 3.csv,Day2,Hg,Hg single line ~6250 Å,,,Redo calibration; sweep settings not encoded in filename.
+data/hd/day3_old_lamp/1324 6562 H-L (2).csv,Day3,H-D (old lamp),Balmer region,5.0,H->L,Old lamp; lower SNR and more ambiguous peak heights.
+data/hd/day3_old_lamp/1328 4859 L-H (1).csv,Day3,H-D (old lamp),Balmer region,5.0,L->H,Old lamp; lower SNR and more ambiguous peak heights.
+data/hd/day3_old_lamp/1333 4337 L-H (1).csv,Day3,H-D (old lamp),Balmer region,5.0,L->H,Old lamp; lower SNR and more ambiguous peak heights.
+data/hd/day3_old_lamp/1341 4098 L-H (1).csv,Day3,H-D (old lamp),Balmer region,5.0,L->H,Old lamp; lower SNR and more ambiguous peak heights.
+data/hd/day4_new_lamp/6559-6561_L-H_trail_1.csv,Day4,H-D (new lamp),Hα region (~6563 Å),5.0,L->H,New lamp; only Hα and Hβ reliably measured.
+data/hd/day4_new_lamp/6559-6561_L-H_trail_2.csv,Day4,H-D (new lamp),Hα region (~6563 Å),5.0,L->H,New lamp; only Hα and Hβ reliably measured.
+data/hd/day4_new_lamp/6559-6561_L-H_trail_3.csv,Day4,H-D (new lamp),Hα region (~6563 Å),5.0,L->H,New lamp; only Hα and Hβ reliably measured.
+data/hd/day4_new_lamp/6559-6561_L-H_trail_3 (1).csv,Day4,H-D (new lamp),Hα region (~6563 Å),5.0,L->H,New lamp; only Hα and Hβ reliably measured.
+data/hd/day4_new_lamp/6559-6561_L-H_trail_4.csv,Day4,H-D (new lamp),Hα region (~6563 Å),5.0,L->H,New lamp; only Hα and Hβ reliably measured.
+data/hd/day4_new_lamp/4859-4862_H-L_trail_1.csv,Day4,H-D (new lamp),Hβ region (~4861 Å),5.0,H->L,New lamp; only Hα and Hβ reliably measured.
+data/hd/day4_new_lamp/4859-4862_L-H_trail_2.csv,Day4,H-D (new lamp),Hβ region (~4861 Å),5.0,L->H,New lamp; only Hα and Hβ reliably measured.
+data/hd/day4_new_lamp/4859-4862_L-H_trail_3.csv,Day4,H-D (new lamp),Hβ region (~4861 Å),5.0,L->H,New lamp; only Hα and Hβ reliably measured.
+data/hd/day4_new_lamp/4859-4862_L-H_trail_4.csv,Day4,H-D (new lamp),Hβ region (~4861 Å),5.0,L->H,New lamp; only Hα and Hβ reliably measured.
